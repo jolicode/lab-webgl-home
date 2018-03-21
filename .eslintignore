@@ -1,0 +1,5 @@
+/src/javascript/components/dat.gui.min.js
+/node_modules/
+/build/*.js
+/src/javascript/components/GLTFLoader.js
+/config/*.js
