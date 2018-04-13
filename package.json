@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "start": "NODE_ENV=developement webpack-dev-server",
-    "build": "cp ./src/*.html ./build/ & cp -R ./src/assets ./build/ & webpack -p"
+    "build": "cp ./src/*.html ./build/ & cp -R ./src/assets ./build/assets & webpack -p"
   },
   "dependencies": {
     "three": "^0.90.0",
