@@ -29,7 +29,7 @@ export default class HomeScene {
     const loader = new THREE.GLTFLoader();
     loader.load('./assets/objects/joliHome.glb', gltf => {
       let object = gltf.scene;
-      let envMap = this.getEnvMapCube('./../assets/images/', '.jpg');
+      let envMap = this.getEnvMapCube('./assets/images/', '.jpg');
 
       object.traverse(node => {
         if (
