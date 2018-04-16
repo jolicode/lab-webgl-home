@@ -1,5 +1,7 @@
 # lab-webgl-home
 
+Article about this repository can be found here: https://jolicode.com/blog/webgl-the-wow-effect
+
 ## To start :
 
 1. Clone the project & ```cd path/to/the/clonned/repository```
