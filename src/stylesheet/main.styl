@@ -19,28 +19,17 @@ h1
     left 0
     transform-origin: top left
     transform: scale(.7)
+    @media screen and (max-width: 600px)
+      transform: scale(.6)
 
-#newFile
-  display: none
-
-#informations
-  padding:1em 2em
-  position: absolute
-  // text-transform:uppercase
-  border-radius: 7px 7px 0px 0px;
-  bottom: 0
-  margin:auto
-  left:0
-  right:0
-  width: 300px
-  background: #597FCA
-  color: white
-  letter-spacing: 0.1em
-  font-size: 1.3em
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
 
 .helpers
   position: absolute
   bottom:0
   list-style:none
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  @media screen and (max-width: 600px)
+    font-size: 0.8em
+    img
+      width: 30px

@@ -39,7 +39,7 @@ export default class HomeScene {
               node.material.envMap !== undefined))
         ) {
           if (
-            node.name === 'computerMat_1' ||
+            node.name === 'computerMat_0' ||
             node.name === 'ipadScreen' ||
             node.name === 'ipadExtMat_1' ||
             node.name === 'phoneMat_0' ||
@@ -47,7 +47,7 @@ export default class HomeScene {
             node.name === 'phoneMat_2' ||
             node.name === 'phoneMat_3' ||
             node.name === 'mouseMat_0' ||
-            node.name === 'coffee'
+            node.name === 'cupEmptyMat_0'
           ) {
             node.material.envMap = envMap;
             node.material.envMapIntensity = 0.3;
