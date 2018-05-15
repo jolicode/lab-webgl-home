@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const Config = require('./settings.config')
 
@@ -28,7 +28,7 @@ module.exports = {
             enforce: "pre",
             test: /\.js$/,
             exclude: [/node_modules/],
-            loader : "eslint-loader",
+            loader : 'eslint-loader',
           },
           {
               test: /\.js$/,
@@ -49,25 +49,21 @@ module.exports = {
           },
           {
               test: /\.styl/,
-              use: ExtractTextPlugin
-                .extract({
-                    fallback: 'style-loader',
-                    use: [
-                        { loader: 'css-loader', query: { modules: false, sourceMaps: Config.sourceMap } },
-                        { loader: 'postcss-loader'},
-                        { loader: 'stylus-loader'},
-                    ]
-                })
+              use: [
+                MiniCssExtractPlugin.loader,
+                      'css-loader',
+                      'postcss-loader',
+                      'stylus-loader'
+              ]
           },
           {
               test: /\.(txt|frag|vert|glsl|svg)$/,
               use: 'raw-loader'
           },
-          // Loaders for other file types can go here
         ],
     },
     plugins: [
-        new ExtractTextPlugin({
+        new MiniCssExtractPlugin({
             filename: 'stylesheet/main.css',
             allChunks: true,
         }),
